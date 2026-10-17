@@ -1,0 +1,48 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Server Monitoring Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>☁️ Cloud Server Monitoring</h1>
+        <p>Real-time server performance dashboard</p>
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h3>CPU Usage</h3>
+                <p id="cpu">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>Memory Usage</h3>
+                <p id="memory">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>Disk Usage</h3>
+                <p id="disk">Loading...</p>
+            </div>
+            <div class="card">
+                <h3>Server Status</h3>
+                <p id="status">Checking...</p>
+            </div>
+        </section>
+
+        <section class="chart-card">
+            <h2>CPU Usage History</h2>
+            <canvas id="cpuChart"></canvas>
+        </section>
+
+        <p id="updated">Waiting for server data...</p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+```
